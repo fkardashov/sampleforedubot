@@ -2,11 +2,10 @@ package simplebot.utils;
 
 import com.google.gson.Gson;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.context.annotation.PropertySource;
 import org.springframework.stereotype.Component;
-import simplebot.utils.config.Config;
-import simplebot.utils.data.Segment;
 import simplebot.utils.data.RailWayInfo;
-
+import simplebot.utils.data.Segment;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -21,10 +20,12 @@ import java.util.StringJoiner;
 import static java.time.temporal.ChronoUnit.MINUTES;
 
 @Component
+@PropertySource("classpath:config.properties")
 public class GetRailwayInfo {
     private final String apiTemplate = "https://api.rasp.yandex.net/v3.0/search/?apikey={apikey}&format=json&from={from}&to={to}&lang=ru_RU&page=1&transport_types=suburban&limit=100";
     private static final Gson gson = new Gson();
     private RailWayInfo railWayInfo;
+
     @Value("${yandex.pasp}")
     private String apikey;
 
