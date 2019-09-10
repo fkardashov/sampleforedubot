@@ -28,9 +28,4 @@ public class TaskServiceTest {
         taskService.deleteTask("1");
     }
 
-    @Test
-    public String toString() {
-        assertNotEquals("", taskService.toString());
-        return null;
-    }
 }
