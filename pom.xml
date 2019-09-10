@@ -7,13 +7,7 @@
     <groupId>sampleforedubot</groupId>
     <artifactId>sampleforedubot</artifactId>
     <version>1.0-SNAPSHOT</version>
-    <repositories>
-        <repository>
-            <id>repo2</id>
-            <name>your custom repo</name>
-            <url>https://jitpack.io</url>
-        </repository>
-    </repositories>
+
 
 
     <dependencies>
