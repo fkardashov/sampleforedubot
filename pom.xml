@@ -8,8 +8,6 @@
     <artifactId>sampleforedubot</artifactId>
     <version>1.0-SNAPSHOT</version>
 
-
-
     <dependencies>
         <dependency>
             <groupId>ch.qos.logback</groupId>
