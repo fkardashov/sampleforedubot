@@ -38,7 +38,7 @@ public class Bot extends TelegramLongPollingBot {
         String txt = msg.getText();
 
         if (txt.startsWith("/youtube")){
-            File file = youtubeService.getVideo( txt.replaceAll("/youtube", "").trim());
+            File file = null; youtubeService.getVideo( txt.replaceAll("/youtube", "").trim());
             SendVideo sendVideo = new SendVideo();
             sendVideo.setChatId(update.getMessage().getChatId().toString());
             sendVideo.setVideo(file);
